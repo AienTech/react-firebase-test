@@ -12,26 +12,30 @@ export default {
 		messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 		appId: process.env.REACT_APP_FIREBASE_APP_ID
 	},
-	routes: [
-		{
+	routes: {
+		index: {
 			pathname: "/",
-			componenet: Index,
+			isCaseSensitive: true,
+			component: Index,
 			isProtected: false
 		},
-		{
+		login: {
 			pathname: "/login",
-			componenet: Login,
+			isCaseSensitive: false,
+			component: Login,
 			isProtected: false
 		},
-		{
+		register: {
 			pathname: "/register",
-			componenet: Register,
+			isCaseSensitive: false,
+			component: Register,
 			isProtected: false
 		},
-		{
+		chat: {
 			pathname: "/chat",
-			componenet: Chat,
+			isCaseSensitive: false,
+			component: Chat,
 			isProtected: true
-		}
-	]
+		},
+	}
 };
