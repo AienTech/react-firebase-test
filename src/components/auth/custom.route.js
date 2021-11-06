@@ -5,19 +5,19 @@ import config from "../../services/config";
 
 const CustomRoute = ({ children, isProtected }) =>
 {
-	let auth = useAuth();
+	let { User } = useAuth();
 	let location = useLocation();
 
 	if (isProtected)
 	{
-		if (!auth.user)
+		if (!User)
 		{
 			return <Navigate to={config.routes.login.pathname} state={{ from: location }} />;
 		}
 		return children;
 	}
 
-	if (auth.user)
+	if (User)
 	{
 		return <Navigate to={config.routes.chat.pathname} state={{ from: location }} />;
 	}
