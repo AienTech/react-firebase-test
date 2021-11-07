@@ -9,24 +9,24 @@ export default {
 	},
 	routes: {
 		index: {
-			pathname: "/",
+			pathname: '/',
 			isCaseSensitive: true,
 			isProtected: false
 		},
 		login: {
-			pathname: "/login",
+			pathname: '/login',
 			isCaseSensitive: false,
 			isProtected: false
 		},
 		register: {
-			pathname: "/register",
+			pathname: '/register',
 			isCaseSensitive: false,
 			isProtected: false
 		},
 		chat: {
-			pathname: "/chat",
+			pathname: '/chat',
 			isCaseSensitive: false,
 			isProtected: true
-		},
+		}
 	}
 };
