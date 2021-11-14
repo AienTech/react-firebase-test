@@ -17,6 +17,7 @@ function App() {
 							<Route
 								key={routeConfig}
 								path={route.pathname}
+								caseSensitive={route.isCaseSensitive}
 								element={
 									<CustomRoute isProtected={route.isProtected}>
 										<Suspense fallback={<p>Loading...</p>}>
@@ -27,6 +28,7 @@ function App() {
 							/>
 						);
 					})}
+					<Route path="*" element={<p>Not found</p>} />
 				</Routes>
 			</div>
 		</AuthProvider>

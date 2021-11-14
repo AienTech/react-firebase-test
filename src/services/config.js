@@ -23,10 +23,43 @@ export default {
 			isCaseSensitive: false,
 			isProtected: false
 		},
-		chat: {
-			pathname: '/chat',
-			isCaseSensitive: false,
+		entity: {
+			pathname: '/admin/:entityName/:actionName',
+			isCaseSensitive: true,
 			isProtected: true
+		},
+	},
+	entities: {
+		project: {
+			fields: {
+				name: {
+					type: "string"
+				}
+			}
+		},
+		phase: {
+			fields: {
+				name: {
+					type: "string"
+				},
+				title: {
+					type: "string"
+				},
+				learningDays: {
+					type: "number"
+				},
+				topics: {
+					type: "ref",
+					reference: "topic"
+				}
+			}
+		},
+		roadmap: {
+			fields: {
+				name: {
+					type: "string"
+				}
+			}
 		}
 	}
 };

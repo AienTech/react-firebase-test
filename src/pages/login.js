@@ -13,8 +13,9 @@ const Login = () => {
 
 		let formData = new FormData(event.currentTarget);
 		let email = formData.get('email');
+		let password = formData.get('password');
 
-		auth.SignIn(email, () => {
+		auth.SignIn(email, password, () => {
 			navigate(from, { replace: true });
 		});
 	}
